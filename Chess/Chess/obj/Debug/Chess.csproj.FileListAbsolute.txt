@@ -1,0 +1,27 @@
+C:\Users\Joshua\Documents\My Programs\Chess\Chess\bin\Debug\Chess.exe.config
+C:\Users\Joshua\Documents\My Programs\Chess\Chess\obj\Debug\Chess.csprojResolveAssemblyReference.cache
+C:\Users\Joshua\Documents\My Programs\Chess\Chess\obj\Debug\Chess.Properties.Resources.resources
+C:\Users\Joshua\Documents\My Programs\Chess\Chess\obj\Debug\Chess.csproj.GenerateResource.Cache
+C:\Users\Joshua\Documents\My Programs\Chess\Chess\bin\Debug\Chess.exe
+C:\Users\Joshua\Documents\My Programs\Chess\Chess\bin\Debug\Chess.pdb
+C:\Users\Joshua\Documents\My Programs\Chess\Chess\obj\Debug\Chess.exe
+C:\Users\Joshua\Documents\My Programs\Chess\Chess\obj\Debug\Chess.pdb
+C:\Users\Joshua\Documents\My Programs\Chess\Chess\obj\Debug\Chess.Form1.resources
+C:\Users\Joshua\Documents\Code\master\ExtraCircular\C#\Chess\Chess\bin\Debug\Chess.exe.config
+C:\Users\Joshua\Documents\Code\master\ExtraCircular\C#\Chess\Chess\obj\Debug\Chess.exe
+C:\Users\Joshua\Documents\Code\master\ExtraCircular\C#\Chess\Chess\obj\Debug\Chess.pdb
+C:\Users\Joshua\Documents\Code\master\ExtraCircular\C#\Chess\Chess\bin\Debug\Chess.exe
+C:\Users\Joshua\Documents\Code\master\ExtraCircular\C#\Chess\Chess\bin\Debug\Chess.pdb
+C:\Users\Joshua\Documents\Code\master\ExtraCircular\C#\Chess\Chess\obj\Debug\Chess.csprojResolveAssemblyReference.cache
+C:\Users\Joshua\Documents\Code\master\ExtraCircular\C#\Chess\Chess\obj\Debug\Chess.Form1.resources
+C:\Users\Joshua\Documents\Code\master\ExtraCircular\C#\Chess\Chess\obj\Debug\Chess.Properties.Resources.resources
+C:\Users\Joshua\Documents\Code\master\ExtraCircular\C#\Chess\Chess\obj\Debug\Chess.csproj.GenerateResource.Cache
+C:\Users\Joshua\Desktop\code\ExtraCircular\C#\VisualStudio\Chess\Chess\bin\Debug\Chess.exe.config
+C:\Users\Joshua\Desktop\code\ExtraCircular\C#\VisualStudio\Chess\Chess\obj\Debug\Chess.exe
+C:\Users\Joshua\Desktop\code\ExtraCircular\C#\VisualStudio\Chess\Chess\obj\Debug\Chess.pdb
+C:\Users\Joshua\Desktop\code\ExtraCircular\C#\VisualStudio\Chess\Chess\bin\Debug\Chess.exe
+C:\Users\Joshua\Desktop\code\ExtraCircular\C#\VisualStudio\Chess\Chess\bin\Debug\Chess.pdb
+C:\Users\Joshua\Desktop\code\ExtraCircular\C#\VisualStudio\Chess\Chess\obj\Debug\Chess.csprojResolveAssemblyReference.cache
+C:\Users\Joshua\Desktop\code\ExtraCircular\C#\VisualStudio\Chess\Chess\obj\Debug\Chess.Form1.resources
+C:\Users\Joshua\Desktop\code\ExtraCircular\C#\VisualStudio\Chess\Chess\obj\Debug\Chess.Properties.Resources.resources
+C:\Users\Joshua\Desktop\code\ExtraCircular\C#\VisualStudio\Chess\Chess\obj\Debug\Chess.csproj.GenerateResource.Cache

@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# ASL version 0.1
+#-----------------------------------------------------------
+
+  === Operators ===
+
+    OR        |  (binary)
+
+    AND       &  (binary)
+
+    XOR       #  (binary)
+
+    RANDOM    ?  (binary)
+
+    PLUS      +  (binary)
+    MINUS     -  (binary)
+
+    MULTIPLY  *  (binary)
+    DIVIDE    /  (binary)
+    MODULUS   %  (binary)
+
+    EXPONENTIATION  ^  (binary)
+
+    FACTORIAL       !  (unary, suffix)
+    SQUARE_ROOT     $  (unary, suffix)
+
+    UMINUS - (unary, prefix)
+    UPLUS  + (unary, prefix)
+    NOT    ~ (unary, prefix)
+
+  === Literals ===
+
+    INTEGER
+      a sequence of decimal digits
+      '0b' followed by a sequence of binary digits
+      '0o' followed by a sequence of octal digits
+      '0x' followed by a sequence of hex digits
+      a Roman number
+
+    REAL
+      a sequence of decimal digits including a decimal point '.'
+      and optionally an exponent, which is the letter 'e' or 'E'
+      optionally followed by a sign ('+' or '-') followed by a
+      sequence of decimal digits.
+
+      If the exponent is given, the decimal point may be omitted.
+
+    STRING
+      any characters except " and new line within quotation
+      marks (").
+
+#-----------------------------------------------------------

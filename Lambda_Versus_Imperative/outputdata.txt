@@ -1,0 +1,142 @@
+babylonian(  0) is 0.000000 =   0.000000
+babylonian( 17) is 2.571282 =  17.000000
+babylonian( 34) is 3.239612 =  34.000000
+babylonian( 51) is 3.708430 =  51.000000
+babylonian( 68) is 4.081655 =  68.000000
+babylonian( 85) is 4.396830 =  85.000000
+babylonian(102) is 4.672329 = 102.000000
+babylonian(119) is 4.918685 = 119.000000
+babylonian(136) is 5.142563 = 136.000000
+babylonian(153) is 5.348481 = 153.000000
+babylonian(170) is 5.539658 = 170.000000
+babylonian(187) is 5.718479 = 187.000000
+babylonian(204) is 5.886765 = 204.000000
+babylonian(221) is 6.045944 = 221.000000
+babylonian(238) is 6.197154 = 238.000000
+babylonian(255) is 6.341326 = 255.000000
+babylonian(272) is 6.479224 = 272.000000
+babylonian(289) is 6.611489 = 289.000000
+babylonian(306) is 6.738664 = 306.000000
+babylonian(323) is 6.861212 = 323.000000
+babylonian(340) is 6.979532 = 340.000000
+pseudoPell(0) is 0
+pseudoPell(1) is 1
+pseudoPell(2) is 2
+pseudoPell(3) is 8
+pseudoPell(4) is 29
+pseudoPell(5) is 105
+pseudoPell(6) is 381
+pseudoPell(7) is 1382
+pseudoPell(8) is 5013
+pseudoPell(9) is 18184
+pseudoPell(10) is 65960
+pseudoPell(11) is 239261
+pseudoPell(12) is 867887
+pseudoPell(13) is 3148143
+pseudoPell(14) is 11419464
+pseudoPell(15) is 41422565
+pseudoPell(16) is 150254766
+pseudoPell(17) is 545028892
+pseudoPell(18) is 1977018773
+pseudoPell(19) is 7171368869
+pseudoPell(20) is 26013173045
+GCF(1, 1) is 1
+GCF(1, 2) is 1
+GCF(1, 3) is 1
+GCF(1, 4) is 1
+GCF(1, 5) is 1
+GCF(1, 6) is 1
+GCF(1, 7) is 1
+GCF(1, 8) is 1
+GCF(1, 9) is 1
+GCF(1, 10) is 1
+GCF(2, 1) is 1
+GCF(2, 2) is 2
+GCF(2, 3) is 1
+GCF(2, 4) is 2
+GCF(2, 5) is 1
+GCF(2, 6) is 2
+GCF(2, 7) is 1
+GCF(2, 8) is 2
+GCF(2, 9) is 1
+GCF(2, 10) is 2
+GCF(3, 1) is 1
+GCF(3, 2) is 1
+GCF(3, 3) is 3
+GCF(3, 4) is 1
+GCF(3, 5) is 1
+GCF(3, 6) is 3
+GCF(3, 7) is 1
+GCF(3, 8) is 1
+GCF(3, 9) is 3
+GCF(3, 10) is 1
+GCF(4, 1) is 1
+GCF(4, 2) is 2
+GCF(4, 3) is 1
+GCF(4, 4) is 4
+GCF(4, 5) is 1
+GCF(4, 6) is 2
+GCF(4, 7) is 1
+GCF(4, 8) is 4
+GCF(4, 9) is 1
+GCF(4, 10) is 2
+GCF(5, 1) is 1
+GCF(5, 2) is 1
+GCF(5, 3) is 1
+GCF(5, 4) is 1
+GCF(5, 5) is 5
+GCF(5, 6) is 1
+GCF(5, 7) is 1
+GCF(5, 8) is 1
+GCF(5, 9) is 1
+GCF(5, 10) is 5
+GCF(6, 1) is 1
+GCF(6, 2) is 2
+GCF(6, 3) is 3
+GCF(6, 4) is 2
+GCF(6, 5) is 1
+GCF(6, 6) is 6
+GCF(6, 7) is 1
+GCF(6, 8) is 2
+GCF(6, 9) is 3
+GCF(6, 10) is 2
+GCF(7, 1) is 1
+GCF(7, 2) is 1
+GCF(7, 3) is 1
+GCF(7, 4) is 1
+GCF(7, 5) is 1
+GCF(7, 6) is 1
+GCF(7, 7) is 7
+GCF(7, 8) is 1
+GCF(7, 9) is 1
+GCF(7, 10) is 1
+GCF(8, 1) is 1
+GCF(8, 2) is 2
+GCF(8, 3) is 1
+GCF(8, 4) is 4
+GCF(8, 5) is 1
+GCF(8, 6) is 2
+GCF(8, 7) is 1
+GCF(8, 8) is 8
+GCF(8, 9) is 1
+GCF(8, 10) is 2
+GCF(9, 1) is 1
+GCF(9, 2) is 1
+GCF(9, 3) is 3
+GCF(9, 4) is 1
+GCF(9, 5) is 1
+GCF(9, 6) is 3
+GCF(9, 7) is 1
+GCF(9, 8) is 1
+GCF(9, 9) is 9
+GCF(9, 10) is 1
+GCF(10, 1) is 1
+GCF(10, 2) is 2
+GCF(10, 3) is 1
+GCF(10, 4) is 2
+GCF(10, 5) is 5
+GCF(10, 6) is 2
+GCF(10, 7) is 1
+GCF(10, 8) is 2
+GCF(10, 9) is 1
+GCF(10, 10) is 10

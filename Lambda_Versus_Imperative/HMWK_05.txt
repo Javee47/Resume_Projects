@@ -1,0 +1,192 @@
+#----------------------------------------------------------------------
+Programming Assignment 05
+
+#----------------------------------------------------------------------
+Purpose:
+
+  * Demonstrate (elementary) understanding of imperative and
+    lambda programming in Java.
+
+#----------------------------------------------------------------------
+Background:
+  * The Babylonian cube root function takes two arguments, number
+    (the number of which to extract the cube root) and guess (the
+    current guess at the cube root), and returns the value of a
+    cube root of number to within EPSILON precision.
+
+    To do this, first check if the absolute value of difference
+    between the number and the cube of the guess is less than
+    EPSILON.  If so, return guess.  Otherwise, return the value of
+    the babylonian function of the number and a new guess.  The
+    new guess should be two-thirds of the current guess plus
+    one-third of the number divided by the square of the current
+    guess.
+
+    When you call the babylonian function the first time, use
+    EPSILON as the initial guess at the cube root.  (Why not 0?)
+    
+  * The pseudo-Pell function takes one argument, n, and returns
+    the value of three times the value of pseudo-Pell function
+    of n-1 plus two times the value of the pseudo-Pell function
+    of n-2 plus the value of the pseudo-Pell function of n-3.
+    The value of the pseudo-Pell function of n == 2 is 2.
+    The value of the pseudo-Pell function of n == 1 is 1.
+    The value of the pseudo-Pell function of n == 0 is 0.
+    
+  * The GCF function takes two arguments, m and n.  If m == n,
+    GCF returns m.  If m > n, GCF returns the value of the GCF
+    function of m-n and n.  Otherwise, GCF returns the value of
+    the GCF function of m and n-m.
+
+  * The babylonian() function should be called for number = 0 up to
+    and including 340, stepping 17 each time; i.e., 0, 17, 34, 51,
+    ..., 306, 323, 340.
+
+  * The pseudoPell() function should be called for n = 0 up to and
+    including 20.
+
+  * The GCF() function should be called for m = 1 up to and
+    including 10 and n = 1 up to and including 10.  The m loop
+    should be outermost and the n loop innermost.
+
+  * The arguments and results of each call should be printed in
+    messages matching the format and numerical precision of those
+    shown in outputdata.txt.
+
+#----------------------------------------------------------------------
+Tasks:
+
+  1. Download HMWK_05_dalioba.zip from Canvas.
+
+  2. Unzip the file somewhere convenient.
+
+  3. Change 'dalioba' in the name of the directory to your NetID.
+     (Your NetID is three letters followed by four or five digits.
+      The directory name will now be something like
+      'hmwk_05_abc1234', with YOUR NetID instead of 'abc1234'.)
+
+  4. Look in that directory.
+
+  5. Change the header lines in the template files
+     hmwk_05_imperative.java and hmwk_05_lambda.java.
+
+      -- Line 1:  Family name first, then a comma, then
+                  personal name.
+
+      -- Line 2:  Your NetID.
+
+      -- Line 3:  The date you edited the file, in the format
+                  YYYY-MM-DD.
+
+  6. In hmwk_05_imperative.java write the three RECURSIVE Java
+     functions babylonian, pseudoPell, and GCF.  (The spots to put
+     the functions are marked with comments.)  Write loops to call
+     these routines the appropriate number of times from the
+     main() function.
+
+  7. Compile and run the hmwk_05_imperative.java file.  Your
+     output should match that given in the outputdata.txt file.
+
+  8. Now, in the hmwk_05_lambda.java file, write three LAMBDAs
+     that accomplish the same functions as babylonian, pseudoPell,
+     and GCF.  (The spots to put the lambdas are marked with
+     comments.)  Write loops to call these routine the appropriate
+     number of times from the main() function.
+
+  9. Compile and run the hmwk_05_lambda.java file.  Your
+     output should once again match that given in the
+     outputdata.txt file.
+
+#----------------------------------------------------------------------
+Submission:
+
+Make a zipfile of your 'hmwk_05_abc1234' directory (where
+'abc1234' is replaced with YOUR NetID) and submit it on Canvas
+as your results for this assignment.  Your submission should be a
+zipfile that has exactly one item in it, a directory named
+'hmwk_05_abc1234' (where 'abc1234' is YOUR NetID).  Inside that
+directory should be your two source files, hmwk_05_imperative.java
+and hmwk_05_lambda.java.
+
+#----------------------------------------------------------------------
+Hints:
+  1. Your functions in hmwk_05_imperative.java must be RECURSIVE!
+     Do not write the functions using iteration.  Iterative
+     solutions will score ZERO points.
+
+  2. Your lambdas in hmwk_05_lambda.java must NOT use code
+     blocks.  Code blocks are for more complex lambdas.  Code
+     block solutions will score ZERO points.
+
+  3. As a reminder, in Java one can use System.out.format() to
+     print to the console.
+
+     The %f format effector is used for floating point, %d for
+     integers.
+
+     Math.pow() is used to compute the power of a number.
+     Math.abs() is used to compute the absolute value of a number.
+
+  4. These programs are not complex.  Each of the three functions
+     in hmwk_05_imperative.java is THREE lines of code.  The
+     lambdas in hmwk_05_lambda.java are FOUR or FIVE lines
+     of code each.
+
+     Therefore, the total amount you have to write is about 25
+     lines of code for the functions and the lambdas.  Each of
+     the loops is about FOUR or FIVE lines of code, so an
+     additional about 25 lines of code are required there.
+
+  5. Ensure your output messages match the contents of
+     'outputdata.txt'.  The output is going to be checked by a
+     program, so it has to match EXACTLY.
+
+  6. Ensure your programs compile and run correctly.  Not
+     compiling or not generating the correct output will cost you
+     points possibly resulting in ZERO credit.
+
+     After you write your programs, use diff or fc to compare
+     your output to the supplied 'outputdata.txt'.  It must match
+     EXACTLY or you will be penalized points.
+
+     ('EXACTLY' means character-by-character the same.  No, e.g.,
+      differences in spacing, no changes in wording, no changes
+      in punctuation, no changes in capitalization, and so forth.
+      Check your output against the 'outputdata.txt' file!)
+
+  7. Ensure that you update the three header lines in each of the
+     source files with YOUR name (family name first, then a comma,
+     then your personal name), YOUR NetID, and the date you edit
+     the file, in the format YYYY-MM-DD.
+
+     Not updating the header lines properly will cost you points.
+
+  8. Ensure your submission to Canvas is packaged EXACTLY as
+     described above.
+
+      -- Your submission should be a ZIP FILE (not a tar, rar, gz,
+         or any other kind of compressed file).
+
+      -- The zip file should be named 'hmwk_05_abc1234.zip' (with
+         'abc1234' replaced with YOUR NetID).
+
+      -- This zip file should have ONE item in it, a directory
+         named 'hmwk_05_abc1234'  (with 'abc1234' replaced with
+         YOUR NetID).
+
+      -- Your source files should be in that directory.  The
+         source files should be named hmwk_05_imperative.java
+         and hmwk_05_lambda.java.
+
+     Submissions in the wrong format score ZERO points.
+
+  9. After you submit your zip file on Canvas, download it from
+     Canvas and check that your submission is in the proper
+     format, that the programs run and print the correct output,
+     and that you updated the header lines correctly in each of
+     the source files.
+
+ 10. Are you CERTAIN you complied with all of these nit-picking
+     instructions?  Really?  Maybe you ought to check just one
+     more time. :)
+#----------------------------------------------------------------------

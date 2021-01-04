@@ -1,0 +1,276 @@
+#----------------------------------------------------------------------
+Programming Assignment 03
+
+#----------------------------------------------------------------------
+Purpose:
+
+  * Demonstrate additional understanding of lexical and syntactic
+    analysis fundamentals.
+
+  * Demonstrate additional (simple) Python programming skills.
+
+#----------------------------------------------------------------------
+Background:
+
+  * The template included with this assignment shows the essential
+    structure for lexical and syntactic analysis stages of the
+    simple Ply-based expression evaluator but now with the
+    operators we defined for ASL.
+
+  * The template has the operators from the previous assignment
+    already defined.  The new operators AND &, FACTORIAL !, NOT ~,
+    OR |, RANDOM ?, SQUARE_ROOT $, and XOR # must be added.
+
+  * The new operators have the precedence and associativity that
+    we've discussed in class.  Remember that the binary operators
+    are all infix, but some of the unary operators are prefix and
+    some are suffix.  Take a look at the file ASL_version_0.txt.
+    There is information there about these operators.
+
+  * REAL is already defined in the template.  INTEGER is similar
+    to that in the previous homework, but it must be extended to
+    include binary, octal, and decimal integers.
+
+  * Roman numerals must be accepted as INTEGERs.  A couple of
+    routines have been provided that convert properly formatted
+    strings representing Roman numerals to ints and ints to
+    Roman numeral strings.  (These routines are in Roman.py.  Do
+    NOT change anything in this file.)
+
+  * STRING literals must be accepted.  All we do with them now is
+    to print them out, but this will be extended in future work.
+
+#----------------------------------------------------------------------
+Tasks:
+
+  1. Download HMWK_03_dalioba.zip from Canvas.
+
+  2. Unzip the file somewhere convenient.
+
+  3. Change 'dalioba' in the name of the directory to your NetID.
+     (Your NetID is three letters followed by four or five digits.
+      The directory name will now be something like
+      'hmwk_03_abc1234'.)
+
+  4. Look in that directory.
+
+  5. Change the header lines in the provided Python file so that
+     they match your information as follows:
+
+      -- Line 1:  Family name first, then a comma, then
+                  personal name.
+
+      -- Line 2:  Your NetID.
+
+      -- Line 3:  The date you edited the file in the format
+                  YYYY-MM-DD.
+
+     These must remain the first three lines of each file.
+
+  6. Run the given template hmwk_03.py on tests 1 through 19. If
+     you compare the results to those of Homework 02, you will see
+     that most of the tests produce identical output with only
+     tests 09, 14, 15, 18, and 19 having slightly different
+     results.
+
+     Why does this difference occur?  Is it important?
+
+  IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT
+
+  Do NOT proceed further until you have step 6 working PERFECTLY.
+  You will only cause yourself immense grief otherwise.
+
+  IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT
+
+  Do not try to add all processing at once.  Instead add only
+  one operator at a time and get it working PERFECTLY before
+  moving to the next item.
+
+  There's a test case for each operator that is independent of all
+  other operators.  This allows you to test each operator on its
+  own.
+
+  The order I found it easiest to add the operators in is
+  FACTORIAL, SQUARE_ROOT, NOT, OR, AND, XOR, RANDOM.  (Why would
+  this be an easy order to do the additions?)
+
+  Once the operators are all added and are working PERFECTLY, then
+  add the STRING and Roman numeral support.
+
+  IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT
+
+  7. Add token categories for the required new operators and
+     STRING by updating the definition of tokens.  (There's a
+     TODO on line 16.)
+
+  8. Add token representations for the required new operators by
+     making the required t_<whatever> definitions.  (There's a
+     TODO on line 26.)
+
+  9. Update the t_INTEGER token routine to support binary, octal,
+     decimal, and hex literals.  (There's a TODO on line 57.)
+
+ 10. Add a token routine for STRING.  (There's a TODO on line 64.)
+
+ 11. Add the required precedence and associativity information for
+     the operators.  (There's a TODO on line 95.)
+
+ 12. Update the p_expression_binop() syntactic function for the
+     new binary operators.  (There's a TODO on line 153.)
+
+ 13. Update the p_expression_unop_prefix() syntactic function for
+     the new unary operator that's prefix.  (There's a TODO on
+     line 169.)
+
+ 14. Create a p_expression_unop_suffix() syntactic function for
+     the new unary operators that are suffix.  (There's a TODO on
+     line 178.)
+
+ 15. Create a p_statement_string() syntactic routine for the new
+     STRING literal.  (There's a TODO on line 149.)
+
+ 16. Test your work by running it against the test cases given
+     in Tests/.  You should get output IDENTICAL to the provided
+     result files Results/.
+
+     Tests 1 through 19 are the original tests from Homework 02.
+
+     Tests 20 through 26 are tests for each new operator by
+     itself.  Use these tests to ensure your work is correct as
+     you add the new operators one-by-one.
+
+     Tests 27 through 31 are some examples of STRING literals;
+     binary, octal, and hex INTEGER literals;  and Roman numerals.
+
+  IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT
+
+  Your output should be IDENTICAL to that in the corresponding
+  results file.  If it's not -- even off by a SINGLE character --
+  stop and investigate why.  Do not proceed to any additional
+  work until you identify why the discrepancy occurred and fix it.
+
+  IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT
+
+#----------------------------------------------------------------------
+Submission:
+
+Make a zipfile of your 'hmwk_03_abc1234' directory (where
+'abc1234' is replaced with YOUR NetID) and submit it on Canvas
+as your results for this assignment.
+
+Your submission should be a zipfile that has exactly one item in
+it, a directory named 'hmwk_03_abc1234' (where 'abc1234' is YOUR
+NetID).  Inside that directory should be hmwk_03.py.  (You don't
+have to include Roman.py, as you should not change anything in
+this file.)
+
+#----------------------------------------------------------------------
+Hints:
+  1. Ensure your program compiles and runs correctly.  Not
+     compiling or not generating the correct output will cost you
+     points.
+
+     Ensure your output for each test is the same as the
+     corrsponding results file.  It must match EXACTLY.
+
+     After you write your programs, use diff to compare your
+     output to the supplied results files.  It must match EXACTLY
+     or you will be penalized points.
+
+     ('EXACTLY' means character-by-character the same.)
+
+  2. Ensure that you update the three header lines in the source
+     file with YOUR name (family name first, then a comma, then
+     your personal name), YOUR NetID, and the date you edit the
+     file (in the format YYYY-MM-DD).  The header lines must be
+     the first three lines in the file.
+
+     Not updating the header lines properly will cost you points.
+
+     Not having the header lines as the first three lines of the
+     file will cost you points.
+
+  3. This is not a lot of work.  There are only eight (8) token
+     categories to add for the Line 16 TODO.
+
+     For the Line 26 TODO, there are seven (7) t_ specifications
+     to add.
+
+     For the Line 57 TODO, the reference t_INTEGER routine is
+     nine (9) lines of code.
+
+     For the Line 64 TODO, the reference t_STRING routine is
+     four (4) lines of code.
+
+     For the Line 95 TODO, you have to update what's there and add
+     five additional lines of data.
+
+     For the Line 149 TODO, the reference p_statement_string
+     routine is three (3) lines of code.
+
+     For the Line 153 TODO, it's four (4) lines to the production
+     rule and fifteen (15) additional lines of Python processing
+     code.
+
+     For the Line 169 TODO, it's one (1) line to the production
+     rule and one (1) additional line of Python processing code.
+
+     For the Line 178 TODO, p_expression_unop_suffix() is five (5)
+     lines total.
+
+  4. When implementing the RANDOM operator ?, ensure that you use
+     random.randint() and random.uniform() to generate your
+     random numbers.  randint() when both operands are integers
+     and uniform() when at least one of the operands is a floating
+     point number.
+
+     Also, use the MIN of the two operands for the low bound and
+     the MAX of the two operands for the high bound.
+
+  5. When implementing the XOR operator #, check the types of the
+     two operands.  They must both be integers.  It's an error if
+     either is a floating point number.
+
+  6. Adding Roman numeral support is not hard, but it does require
+     some thought.  Consider that a Roman numeral has the same
+     form as an identifier.  Therefore, it's necessary to put
+     processing of Roman numerals in the t_ID lexical routine.
+
+  7. After you complete your work, make up some test cases of your
+     own to ensure that your scanning and parsing really matches
+     the required precedence and associativity.  The test cases in
+     Tests are useful, but they are NOT comprehensive.  Make up
+     some more of your own.
+
+     It's OK to share test cases and expected results files with
+     other students, but do NOT violate the Honor Code as regards
+     your programming work.  Do NOT share details of your
+     programming, review other students' work, etc.
+
+  8. Ensure your submission to Canvas is packaged EXACTLY as
+     described above.
+
+      -- Your submission should be a ZIP FILE (not a tar, rar, gz,
+         or any other kind of compressed file).
+
+      -- The zip file should be named 'hmwk_03_abc1234.zip' (with
+         'abc1234' replaced with YOUR NetID).
+
+      -- This zip file should have ONE item in it, a directory
+         named 'hmwk_03_abc1234'  (with 'abc1234' replaced with
+         YOUR NetID).
+
+      -- Your source file hmwk_03.py should be in that directory.
+
+     Submissions in the wrong format score ZERO points.
+
+  9. After you submit your zip file on Canvas, download it from
+     Canvas and check that your submission is in the proper
+     format, that the programs run and produce the correct output,
+     and that you updated the header lines correctly.
+
+ 10. Are you CERTAIN you complied with all of these nit-picking
+     instructions?  Really?  Maybe you ought to check just one
+     more time. :)
+
+#----------------------------------------------------------------------

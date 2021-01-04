@@ -1,0 +1,1423 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> statement
+Rule 1     statement -> ID ASSIGN expression
+Rule 2     statement -> expression
+Rule 3     statement -> STRING
+Rule 4     expression -> expression DIVIDE expression
+Rule 5     expression -> expression EXPONENTIATION expression
+Rule 6     expression -> expression MINUS expression
+Rule 7     expression -> expression MODULUS expression
+Rule 8     expression -> expression MULTIPLY expression
+Rule 9     expression -> expression PLUS expression
+Rule 10    expression -> expression OR expression
+Rule 11    expression -> expression AND expression
+Rule 12    expression -> expression XOR expression
+Rule 13    expression -> expression RAND expression
+Rule 14    expression -> MINUS expression
+Rule 15    expression -> PLUS expression
+Rule 16    expression -> NOT expression
+Rule 17    expression -> expression FACTORIAL
+Rule 18    expression -> expression ROOT
+Rule 19    expression -> LPAREN expression RPAREN
+Rule 20    expression -> INTEGER
+Rule 21    expression -> REAL
+Rule 22    expression -> ID
+
+Terminals, with rules where they appear
+
+AND                  : 11
+ASSIGN               : 1
+DIVIDE               : 4
+EXPONENTIATION       : 5
+FACTORIAL            : 17
+ID                   : 1 22
+INTEGER              : 20
+LPAREN               : 19
+MINUS                : 6 14
+MODULUS              : 7
+MULTIPLY             : 8
+NOT                  : 16
+OR                   : 10
+PLUS                 : 9 15
+RAND                 : 13
+REAL                 : 21
+ROOT                 : 18
+RPAREN               : 19
+STRING               : 3
+XOR                  : 12
+error                : 
+
+Nonterminals, with rules where they appear
+
+expression           : 1 2 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 15 16 17 18 19
+statement            : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . statement
+    (1) statement -> . ID ASSIGN expression
+    (2) statement -> . expression
+    (3) statement -> . STRING
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    ID              shift and go to state 2
+    STRING          shift and go to state 4
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+
+    statement                      shift and go to state 1
+    expression                     shift and go to state 3
+
+state 1
+
+    (0) S' -> statement .
+
+
+
+state 2
+
+    (1) statement -> ID . ASSIGN expression
+    (22) expression -> ID .
+
+    ASSIGN          shift and go to state 11
+    DIVIDE          reduce using rule 22 (expression -> ID .)
+    EXPONENTIATION  reduce using rule 22 (expression -> ID .)
+    MINUS           reduce using rule 22 (expression -> ID .)
+    MODULUS         reduce using rule 22 (expression -> ID .)
+    MULTIPLY        reduce using rule 22 (expression -> ID .)
+    PLUS            reduce using rule 22 (expression -> ID .)
+    OR              reduce using rule 22 (expression -> ID .)
+    AND             reduce using rule 22 (expression -> ID .)
+    XOR             reduce using rule 22 (expression -> ID .)
+    RAND            reduce using rule 22 (expression -> ID .)
+    FACTORIAL       reduce using rule 22 (expression -> ID .)
+    ROOT            reduce using rule 22 (expression -> ID .)
+    $end            reduce using rule 22 (expression -> ID .)
+
+
+state 3
+
+    (2) statement -> expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    $end            reduce using rule 2 (statement -> expression .)
+    DIVIDE          shift and go to state 12
+    EXPONENTIATION  shift and go to state 13
+    MINUS           shift and go to state 14
+    MODULUS         shift and go to state 15
+    MULTIPLY        shift and go to state 16
+    PLUS            shift and go to state 17
+    OR              shift and go to state 18
+    AND             shift and go to state 19
+    XOR             shift and go to state 20
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+
+state 4
+
+    (3) statement -> STRING .
+
+    $end            reduce using rule 3 (statement -> STRING .)
+
+
+state 5
+
+    (14) expression -> MINUS . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 24
+
+state 6
+
+    (15) expression -> PLUS . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 26
+
+state 7
+
+    (16) expression -> NOT . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 27
+
+state 8
+
+    (19) expression -> LPAREN . expression RPAREN
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 28
+
+state 9
+
+    (20) expression -> INTEGER .
+
+    DIVIDE          reduce using rule 20 (expression -> INTEGER .)
+    EXPONENTIATION  reduce using rule 20 (expression -> INTEGER .)
+    MINUS           reduce using rule 20 (expression -> INTEGER .)
+    MODULUS         reduce using rule 20 (expression -> INTEGER .)
+    MULTIPLY        reduce using rule 20 (expression -> INTEGER .)
+    PLUS            reduce using rule 20 (expression -> INTEGER .)
+    OR              reduce using rule 20 (expression -> INTEGER .)
+    AND             reduce using rule 20 (expression -> INTEGER .)
+    XOR             reduce using rule 20 (expression -> INTEGER .)
+    RAND            reduce using rule 20 (expression -> INTEGER .)
+    FACTORIAL       reduce using rule 20 (expression -> INTEGER .)
+    ROOT            reduce using rule 20 (expression -> INTEGER .)
+    $end            reduce using rule 20 (expression -> INTEGER .)
+    RPAREN          reduce using rule 20 (expression -> INTEGER .)
+
+
+state 10
+
+    (21) expression -> REAL .
+
+    DIVIDE          reduce using rule 21 (expression -> REAL .)
+    EXPONENTIATION  reduce using rule 21 (expression -> REAL .)
+    MINUS           reduce using rule 21 (expression -> REAL .)
+    MODULUS         reduce using rule 21 (expression -> REAL .)
+    MULTIPLY        reduce using rule 21 (expression -> REAL .)
+    PLUS            reduce using rule 21 (expression -> REAL .)
+    OR              reduce using rule 21 (expression -> REAL .)
+    AND             reduce using rule 21 (expression -> REAL .)
+    XOR             reduce using rule 21 (expression -> REAL .)
+    RAND            reduce using rule 21 (expression -> REAL .)
+    FACTORIAL       reduce using rule 21 (expression -> REAL .)
+    ROOT            reduce using rule 21 (expression -> REAL .)
+    $end            reduce using rule 21 (expression -> REAL .)
+    RPAREN          reduce using rule 21 (expression -> REAL .)
+
+
+state 11
+
+    (1) statement -> ID ASSIGN . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 29
+
+state 12
+
+    (4) expression -> expression DIVIDE . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 30
+
+state 13
+
+    (5) expression -> expression EXPONENTIATION . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 31
+
+state 14
+
+    (6) expression -> expression MINUS . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 32
+
+state 15
+
+    (7) expression -> expression MODULUS . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 33
+
+state 16
+
+    (8) expression -> expression MULTIPLY . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 34
+
+state 17
+
+    (9) expression -> expression PLUS . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 35
+
+state 18
+
+    (10) expression -> expression OR . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 36
+
+state 19
+
+    (11) expression -> expression AND . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 37
+
+state 20
+
+    (12) expression -> expression XOR . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 38
+
+state 21
+
+    (13) expression -> expression RAND . expression
+    (4) expression -> . expression DIVIDE expression
+    (5) expression -> . expression EXPONENTIATION expression
+    (6) expression -> . expression MINUS expression
+    (7) expression -> . expression MODULUS expression
+    (8) expression -> . expression MULTIPLY expression
+    (9) expression -> . expression PLUS expression
+    (10) expression -> . expression OR expression
+    (11) expression -> . expression AND expression
+    (12) expression -> . expression XOR expression
+    (13) expression -> . expression RAND expression
+    (14) expression -> . MINUS expression
+    (15) expression -> . PLUS expression
+    (16) expression -> . NOT expression
+    (17) expression -> . expression FACTORIAL
+    (18) expression -> . expression ROOT
+    (19) expression -> . LPAREN expression RPAREN
+    (20) expression -> . INTEGER
+    (21) expression -> . REAL
+    (22) expression -> . ID
+
+    MINUS           shift and go to state 5
+    PLUS            shift and go to state 6
+    NOT             shift and go to state 7
+    LPAREN          shift and go to state 8
+    INTEGER         shift and go to state 9
+    REAL            shift and go to state 10
+    ID              shift and go to state 25
+
+    expression                     shift and go to state 39
+
+state 22
+
+    (17) expression -> expression FACTORIAL .
+
+    DIVIDE          reduce using rule 17 (expression -> expression FACTORIAL .)
+    EXPONENTIATION  reduce using rule 17 (expression -> expression FACTORIAL .)
+    MINUS           reduce using rule 17 (expression -> expression FACTORIAL .)
+    MODULUS         reduce using rule 17 (expression -> expression FACTORIAL .)
+    MULTIPLY        reduce using rule 17 (expression -> expression FACTORIAL .)
+    PLUS            reduce using rule 17 (expression -> expression FACTORIAL .)
+    OR              reduce using rule 17 (expression -> expression FACTORIAL .)
+    AND             reduce using rule 17 (expression -> expression FACTORIAL .)
+    XOR             reduce using rule 17 (expression -> expression FACTORIAL .)
+    RAND            reduce using rule 17 (expression -> expression FACTORIAL .)
+    FACTORIAL       reduce using rule 17 (expression -> expression FACTORIAL .)
+    ROOT            reduce using rule 17 (expression -> expression FACTORIAL .)
+    $end            reduce using rule 17 (expression -> expression FACTORIAL .)
+    RPAREN          reduce using rule 17 (expression -> expression FACTORIAL .)
+
+
+state 23
+
+    (18) expression -> expression ROOT .
+
+    DIVIDE          reduce using rule 18 (expression -> expression ROOT .)
+    EXPONENTIATION  reduce using rule 18 (expression -> expression ROOT .)
+    MINUS           reduce using rule 18 (expression -> expression ROOT .)
+    MODULUS         reduce using rule 18 (expression -> expression ROOT .)
+    MULTIPLY        reduce using rule 18 (expression -> expression ROOT .)
+    PLUS            reduce using rule 18 (expression -> expression ROOT .)
+    OR              reduce using rule 18 (expression -> expression ROOT .)
+    AND             reduce using rule 18 (expression -> expression ROOT .)
+    XOR             reduce using rule 18 (expression -> expression ROOT .)
+    RAND            reduce using rule 18 (expression -> expression ROOT .)
+    FACTORIAL       reduce using rule 18 (expression -> expression ROOT .)
+    ROOT            reduce using rule 18 (expression -> expression ROOT .)
+    $end            reduce using rule 18 (expression -> expression ROOT .)
+    RPAREN          reduce using rule 18 (expression -> expression ROOT .)
+
+
+state 24
+
+    (14) expression -> MINUS expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    DIVIDE          reduce using rule 14 (expression -> MINUS expression .)
+    MINUS           reduce using rule 14 (expression -> MINUS expression .)
+    MODULUS         reduce using rule 14 (expression -> MINUS expression .)
+    MULTIPLY        reduce using rule 14 (expression -> MINUS expression .)
+    PLUS            reduce using rule 14 (expression -> MINUS expression .)
+    OR              reduce using rule 14 (expression -> MINUS expression .)
+    AND             reduce using rule 14 (expression -> MINUS expression .)
+    XOR             reduce using rule 14 (expression -> MINUS expression .)
+    $end            reduce using rule 14 (expression -> MINUS expression .)
+    RPAREN          reduce using rule 14 (expression -> MINUS expression .)
+    EXPONENTIATION  shift and go to state 13
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+  ! EXPONENTIATION  [ reduce using rule 14 (expression -> MINUS expression .) ]
+  ! RAND            [ reduce using rule 14 (expression -> MINUS expression .) ]
+  ! FACTORIAL       [ reduce using rule 14 (expression -> MINUS expression .) ]
+  ! ROOT            [ reduce using rule 14 (expression -> MINUS expression .) ]
+  ! DIVIDE          [ shift and go to state 12 ]
+  ! MINUS           [ shift and go to state 14 ]
+  ! MODULUS         [ shift and go to state 15 ]
+  ! MULTIPLY        [ shift and go to state 16 ]
+  ! PLUS            [ shift and go to state 17 ]
+  ! OR              [ shift and go to state 18 ]
+  ! AND             [ shift and go to state 19 ]
+  ! XOR             [ shift and go to state 20 ]
+
+
+state 25
+
+    (22) expression -> ID .
+
+    DIVIDE          reduce using rule 22 (expression -> ID .)
+    EXPONENTIATION  reduce using rule 22 (expression -> ID .)
+    MINUS           reduce using rule 22 (expression -> ID .)
+    MODULUS         reduce using rule 22 (expression -> ID .)
+    MULTIPLY        reduce using rule 22 (expression -> ID .)
+    PLUS            reduce using rule 22 (expression -> ID .)
+    OR              reduce using rule 22 (expression -> ID .)
+    AND             reduce using rule 22 (expression -> ID .)
+    XOR             reduce using rule 22 (expression -> ID .)
+    RAND            reduce using rule 22 (expression -> ID .)
+    FACTORIAL       reduce using rule 22 (expression -> ID .)
+    ROOT            reduce using rule 22 (expression -> ID .)
+    $end            reduce using rule 22 (expression -> ID .)
+    RPAREN          reduce using rule 22 (expression -> ID .)
+
+
+state 26
+
+    (15) expression -> PLUS expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    DIVIDE          reduce using rule 15 (expression -> PLUS expression .)
+    MINUS           reduce using rule 15 (expression -> PLUS expression .)
+    MODULUS         reduce using rule 15 (expression -> PLUS expression .)
+    MULTIPLY        reduce using rule 15 (expression -> PLUS expression .)
+    PLUS            reduce using rule 15 (expression -> PLUS expression .)
+    OR              reduce using rule 15 (expression -> PLUS expression .)
+    AND             reduce using rule 15 (expression -> PLUS expression .)
+    XOR             reduce using rule 15 (expression -> PLUS expression .)
+    $end            reduce using rule 15 (expression -> PLUS expression .)
+    RPAREN          reduce using rule 15 (expression -> PLUS expression .)
+    EXPONENTIATION  shift and go to state 13
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+  ! EXPONENTIATION  [ reduce using rule 15 (expression -> PLUS expression .) ]
+  ! RAND            [ reduce using rule 15 (expression -> PLUS expression .) ]
+  ! FACTORIAL       [ reduce using rule 15 (expression -> PLUS expression .) ]
+  ! ROOT            [ reduce using rule 15 (expression -> PLUS expression .) ]
+  ! DIVIDE          [ shift and go to state 12 ]
+  ! MINUS           [ shift and go to state 14 ]
+  ! MODULUS         [ shift and go to state 15 ]
+  ! MULTIPLY        [ shift and go to state 16 ]
+  ! PLUS            [ shift and go to state 17 ]
+  ! OR              [ shift and go to state 18 ]
+  ! AND             [ shift and go to state 19 ]
+  ! XOR             [ shift and go to state 20 ]
+
+
+state 27
+
+    (16) expression -> NOT expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    OR              reduce using rule 16 (expression -> NOT expression .)
+    AND             reduce using rule 16 (expression -> NOT expression .)
+    XOR             reduce using rule 16 (expression -> NOT expression .)
+    $end            reduce using rule 16 (expression -> NOT expression .)
+    RPAREN          reduce using rule 16 (expression -> NOT expression .)
+    DIVIDE          shift and go to state 12
+    EXPONENTIATION  shift and go to state 13
+    MINUS           shift and go to state 14
+    MODULUS         shift and go to state 15
+    MULTIPLY        shift and go to state 16
+    PLUS            shift and go to state 17
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+  ! DIVIDE          [ reduce using rule 16 (expression -> NOT expression .) ]
+  ! EXPONENTIATION  [ reduce using rule 16 (expression -> NOT expression .) ]
+  ! MINUS           [ reduce using rule 16 (expression -> NOT expression .) ]
+  ! MODULUS         [ reduce using rule 16 (expression -> NOT expression .) ]
+  ! MULTIPLY        [ reduce using rule 16 (expression -> NOT expression .) ]
+  ! PLUS            [ reduce using rule 16 (expression -> NOT expression .) ]
+  ! RAND            [ reduce using rule 16 (expression -> NOT expression .) ]
+  ! FACTORIAL       [ reduce using rule 16 (expression -> NOT expression .) ]
+  ! ROOT            [ reduce using rule 16 (expression -> NOT expression .) ]
+  ! OR              [ shift and go to state 18 ]
+  ! AND             [ shift and go to state 19 ]
+  ! XOR             [ shift and go to state 20 ]
+
+
+state 28
+
+    (19) expression -> LPAREN expression . RPAREN
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    RPAREN          shift and go to state 40
+    DIVIDE          shift and go to state 12
+    EXPONENTIATION  shift and go to state 13
+    MINUS           shift and go to state 14
+    MODULUS         shift and go to state 15
+    MULTIPLY        shift and go to state 16
+    PLUS            shift and go to state 17
+    OR              shift and go to state 18
+    AND             shift and go to state 19
+    XOR             shift and go to state 20
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+
+state 29
+
+    (1) statement -> ID ASSIGN expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    $end            reduce using rule 1 (statement -> ID ASSIGN expression .)
+    DIVIDE          shift and go to state 12
+    EXPONENTIATION  shift and go to state 13
+    MINUS           shift and go to state 14
+    MODULUS         shift and go to state 15
+    MULTIPLY        shift and go to state 16
+    PLUS            shift and go to state 17
+    OR              shift and go to state 18
+    AND             shift and go to state 19
+    XOR             shift and go to state 20
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+
+state 30
+
+    (4) expression -> expression DIVIDE expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    DIVIDE          reduce using rule 4 (expression -> expression DIVIDE expression .)
+    MINUS           reduce using rule 4 (expression -> expression DIVIDE expression .)
+    MODULUS         reduce using rule 4 (expression -> expression DIVIDE expression .)
+    MULTIPLY        reduce using rule 4 (expression -> expression DIVIDE expression .)
+    PLUS            reduce using rule 4 (expression -> expression DIVIDE expression .)
+    OR              reduce using rule 4 (expression -> expression DIVIDE expression .)
+    AND             reduce using rule 4 (expression -> expression DIVIDE expression .)
+    XOR             reduce using rule 4 (expression -> expression DIVIDE expression .)
+    $end            reduce using rule 4 (expression -> expression DIVIDE expression .)
+    RPAREN          reduce using rule 4 (expression -> expression DIVIDE expression .)
+    EXPONENTIATION  shift and go to state 13
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+  ! EXPONENTIATION  [ reduce using rule 4 (expression -> expression DIVIDE expression .) ]
+  ! RAND            [ reduce using rule 4 (expression -> expression DIVIDE expression .) ]
+  ! FACTORIAL       [ reduce using rule 4 (expression -> expression DIVIDE expression .) ]
+  ! ROOT            [ reduce using rule 4 (expression -> expression DIVIDE expression .) ]
+  ! DIVIDE          [ shift and go to state 12 ]
+  ! MINUS           [ shift and go to state 14 ]
+  ! MODULUS         [ shift and go to state 15 ]
+  ! MULTIPLY        [ shift and go to state 16 ]
+  ! PLUS            [ shift and go to state 17 ]
+  ! OR              [ shift and go to state 18 ]
+  ! AND             [ shift and go to state 19 ]
+  ! XOR             [ shift and go to state 20 ]
+
+
+state 31
+
+    (5) expression -> expression EXPONENTIATION expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    DIVIDE          reduce using rule 5 (expression -> expression EXPONENTIATION expression .)
+    EXPONENTIATION  reduce using rule 5 (expression -> expression EXPONENTIATION expression .)
+    MINUS           reduce using rule 5 (expression -> expression EXPONENTIATION expression .)
+    MODULUS         reduce using rule 5 (expression -> expression EXPONENTIATION expression .)
+    MULTIPLY        reduce using rule 5 (expression -> expression EXPONENTIATION expression .)
+    PLUS            reduce using rule 5 (expression -> expression EXPONENTIATION expression .)
+    OR              reduce using rule 5 (expression -> expression EXPONENTIATION expression .)
+    AND             reduce using rule 5 (expression -> expression EXPONENTIATION expression .)
+    XOR             reduce using rule 5 (expression -> expression EXPONENTIATION expression .)
+    FACTORIAL       reduce using rule 5 (expression -> expression EXPONENTIATION expression .)
+    ROOT            reduce using rule 5 (expression -> expression EXPONENTIATION expression .)
+    $end            reduce using rule 5 (expression -> expression EXPONENTIATION expression .)
+    RPAREN          reduce using rule 5 (expression -> expression EXPONENTIATION expression .)
+    RAND            shift and go to state 21
+
+  ! RAND            [ reduce using rule 5 (expression -> expression EXPONENTIATION expression .) ]
+  ! DIVIDE          [ shift and go to state 12 ]
+  ! EXPONENTIATION  [ shift and go to state 13 ]
+  ! MINUS           [ shift and go to state 14 ]
+  ! MODULUS         [ shift and go to state 15 ]
+  ! MULTIPLY        [ shift and go to state 16 ]
+  ! PLUS            [ shift and go to state 17 ]
+  ! OR              [ shift and go to state 18 ]
+  ! AND             [ shift and go to state 19 ]
+  ! XOR             [ shift and go to state 20 ]
+  ! FACTORIAL       [ shift and go to state 22 ]
+  ! ROOT            [ shift and go to state 23 ]
+
+
+state 32
+
+    (6) expression -> expression MINUS expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    MINUS           reduce using rule 6 (expression -> expression MINUS expression .)
+    PLUS            reduce using rule 6 (expression -> expression MINUS expression .)
+    OR              reduce using rule 6 (expression -> expression MINUS expression .)
+    AND             reduce using rule 6 (expression -> expression MINUS expression .)
+    XOR             reduce using rule 6 (expression -> expression MINUS expression .)
+    $end            reduce using rule 6 (expression -> expression MINUS expression .)
+    RPAREN          reduce using rule 6 (expression -> expression MINUS expression .)
+    DIVIDE          shift and go to state 12
+    EXPONENTIATION  shift and go to state 13
+    MODULUS         shift and go to state 15
+    MULTIPLY        shift and go to state 16
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+  ! DIVIDE          [ reduce using rule 6 (expression -> expression MINUS expression .) ]
+  ! EXPONENTIATION  [ reduce using rule 6 (expression -> expression MINUS expression .) ]
+  ! MODULUS         [ reduce using rule 6 (expression -> expression MINUS expression .) ]
+  ! MULTIPLY        [ reduce using rule 6 (expression -> expression MINUS expression .) ]
+  ! RAND            [ reduce using rule 6 (expression -> expression MINUS expression .) ]
+  ! FACTORIAL       [ reduce using rule 6 (expression -> expression MINUS expression .) ]
+  ! ROOT            [ reduce using rule 6 (expression -> expression MINUS expression .) ]
+  ! MINUS           [ shift and go to state 14 ]
+  ! PLUS            [ shift and go to state 17 ]
+  ! OR              [ shift and go to state 18 ]
+  ! AND             [ shift and go to state 19 ]
+  ! XOR             [ shift and go to state 20 ]
+
+
+state 33
+
+    (7) expression -> expression MODULUS expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    DIVIDE          reduce using rule 7 (expression -> expression MODULUS expression .)
+    MINUS           reduce using rule 7 (expression -> expression MODULUS expression .)
+    MODULUS         reduce using rule 7 (expression -> expression MODULUS expression .)
+    MULTIPLY        reduce using rule 7 (expression -> expression MODULUS expression .)
+    PLUS            reduce using rule 7 (expression -> expression MODULUS expression .)
+    OR              reduce using rule 7 (expression -> expression MODULUS expression .)
+    AND             reduce using rule 7 (expression -> expression MODULUS expression .)
+    XOR             reduce using rule 7 (expression -> expression MODULUS expression .)
+    $end            reduce using rule 7 (expression -> expression MODULUS expression .)
+    RPAREN          reduce using rule 7 (expression -> expression MODULUS expression .)
+    EXPONENTIATION  shift and go to state 13
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+  ! EXPONENTIATION  [ reduce using rule 7 (expression -> expression MODULUS expression .) ]
+  ! RAND            [ reduce using rule 7 (expression -> expression MODULUS expression .) ]
+  ! FACTORIAL       [ reduce using rule 7 (expression -> expression MODULUS expression .) ]
+  ! ROOT            [ reduce using rule 7 (expression -> expression MODULUS expression .) ]
+  ! DIVIDE          [ shift and go to state 12 ]
+  ! MINUS           [ shift and go to state 14 ]
+  ! MODULUS         [ shift and go to state 15 ]
+  ! MULTIPLY        [ shift and go to state 16 ]
+  ! PLUS            [ shift and go to state 17 ]
+  ! OR              [ shift and go to state 18 ]
+  ! AND             [ shift and go to state 19 ]
+  ! XOR             [ shift and go to state 20 ]
+
+
+state 34
+
+    (8) expression -> expression MULTIPLY expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    DIVIDE          reduce using rule 8 (expression -> expression MULTIPLY expression .)
+    MINUS           reduce using rule 8 (expression -> expression MULTIPLY expression .)
+    MODULUS         reduce using rule 8 (expression -> expression MULTIPLY expression .)
+    MULTIPLY        reduce using rule 8 (expression -> expression MULTIPLY expression .)
+    PLUS            reduce using rule 8 (expression -> expression MULTIPLY expression .)
+    OR              reduce using rule 8 (expression -> expression MULTIPLY expression .)
+    AND             reduce using rule 8 (expression -> expression MULTIPLY expression .)
+    XOR             reduce using rule 8 (expression -> expression MULTIPLY expression .)
+    $end            reduce using rule 8 (expression -> expression MULTIPLY expression .)
+    RPAREN          reduce using rule 8 (expression -> expression MULTIPLY expression .)
+    EXPONENTIATION  shift and go to state 13
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+  ! EXPONENTIATION  [ reduce using rule 8 (expression -> expression MULTIPLY expression .) ]
+  ! RAND            [ reduce using rule 8 (expression -> expression MULTIPLY expression .) ]
+  ! FACTORIAL       [ reduce using rule 8 (expression -> expression MULTIPLY expression .) ]
+  ! ROOT            [ reduce using rule 8 (expression -> expression MULTIPLY expression .) ]
+  ! DIVIDE          [ shift and go to state 12 ]
+  ! MINUS           [ shift and go to state 14 ]
+  ! MODULUS         [ shift and go to state 15 ]
+  ! MULTIPLY        [ shift and go to state 16 ]
+  ! PLUS            [ shift and go to state 17 ]
+  ! OR              [ shift and go to state 18 ]
+  ! AND             [ shift and go to state 19 ]
+  ! XOR             [ shift and go to state 20 ]
+
+
+state 35
+
+    (9) expression -> expression PLUS expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    MINUS           reduce using rule 9 (expression -> expression PLUS expression .)
+    PLUS            reduce using rule 9 (expression -> expression PLUS expression .)
+    OR              reduce using rule 9 (expression -> expression PLUS expression .)
+    AND             reduce using rule 9 (expression -> expression PLUS expression .)
+    XOR             reduce using rule 9 (expression -> expression PLUS expression .)
+    $end            reduce using rule 9 (expression -> expression PLUS expression .)
+    RPAREN          reduce using rule 9 (expression -> expression PLUS expression .)
+    DIVIDE          shift and go to state 12
+    EXPONENTIATION  shift and go to state 13
+    MODULUS         shift and go to state 15
+    MULTIPLY        shift and go to state 16
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+  ! DIVIDE          [ reduce using rule 9 (expression -> expression PLUS expression .) ]
+  ! EXPONENTIATION  [ reduce using rule 9 (expression -> expression PLUS expression .) ]
+  ! MODULUS         [ reduce using rule 9 (expression -> expression PLUS expression .) ]
+  ! MULTIPLY        [ reduce using rule 9 (expression -> expression PLUS expression .) ]
+  ! RAND            [ reduce using rule 9 (expression -> expression PLUS expression .) ]
+  ! FACTORIAL       [ reduce using rule 9 (expression -> expression PLUS expression .) ]
+  ! ROOT            [ reduce using rule 9 (expression -> expression PLUS expression .) ]
+  ! MINUS           [ shift and go to state 14 ]
+  ! PLUS            [ shift and go to state 17 ]
+  ! OR              [ shift and go to state 18 ]
+  ! AND             [ shift and go to state 19 ]
+  ! XOR             [ shift and go to state 20 ]
+
+
+state 36
+
+    (10) expression -> expression OR expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    OR              reduce using rule 10 (expression -> expression OR expression .)
+    AND             reduce using rule 10 (expression -> expression OR expression .)
+    XOR             reduce using rule 10 (expression -> expression OR expression .)
+    $end            reduce using rule 10 (expression -> expression OR expression .)
+    RPAREN          reduce using rule 10 (expression -> expression OR expression .)
+    DIVIDE          shift and go to state 12
+    EXPONENTIATION  shift and go to state 13
+    MINUS           shift and go to state 14
+    MODULUS         shift and go to state 15
+    MULTIPLY        shift and go to state 16
+    PLUS            shift and go to state 17
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+  ! DIVIDE          [ reduce using rule 10 (expression -> expression OR expression .) ]
+  ! EXPONENTIATION  [ reduce using rule 10 (expression -> expression OR expression .) ]
+  ! MINUS           [ reduce using rule 10 (expression -> expression OR expression .) ]
+  ! MODULUS         [ reduce using rule 10 (expression -> expression OR expression .) ]
+  ! MULTIPLY        [ reduce using rule 10 (expression -> expression OR expression .) ]
+  ! PLUS            [ reduce using rule 10 (expression -> expression OR expression .) ]
+  ! RAND            [ reduce using rule 10 (expression -> expression OR expression .) ]
+  ! FACTORIAL       [ reduce using rule 10 (expression -> expression OR expression .) ]
+  ! ROOT            [ reduce using rule 10 (expression -> expression OR expression .) ]
+  ! OR              [ shift and go to state 18 ]
+  ! AND             [ shift and go to state 19 ]
+  ! XOR             [ shift and go to state 20 ]
+
+
+state 37
+
+    (11) expression -> expression AND expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    AND             reduce using rule 11 (expression -> expression AND expression .)
+    $end            reduce using rule 11 (expression -> expression AND expression .)
+    RPAREN          reduce using rule 11 (expression -> expression AND expression .)
+    DIVIDE          shift and go to state 12
+    EXPONENTIATION  shift and go to state 13
+    MINUS           shift and go to state 14
+    MODULUS         shift and go to state 15
+    MULTIPLY        shift and go to state 16
+    PLUS            shift and go to state 17
+    OR              shift and go to state 18
+    XOR             shift and go to state 20
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+  ! DIVIDE          [ reduce using rule 11 (expression -> expression AND expression .) ]
+  ! EXPONENTIATION  [ reduce using rule 11 (expression -> expression AND expression .) ]
+  ! MINUS           [ reduce using rule 11 (expression -> expression AND expression .) ]
+  ! MODULUS         [ reduce using rule 11 (expression -> expression AND expression .) ]
+  ! MULTIPLY        [ reduce using rule 11 (expression -> expression AND expression .) ]
+  ! PLUS            [ reduce using rule 11 (expression -> expression AND expression .) ]
+  ! OR              [ reduce using rule 11 (expression -> expression AND expression .) ]
+  ! XOR             [ reduce using rule 11 (expression -> expression AND expression .) ]
+  ! RAND            [ reduce using rule 11 (expression -> expression AND expression .) ]
+  ! FACTORIAL       [ reduce using rule 11 (expression -> expression AND expression .) ]
+  ! ROOT            [ reduce using rule 11 (expression -> expression AND expression .) ]
+  ! AND             [ shift and go to state 19 ]
+
+
+state 38
+
+    (12) expression -> expression XOR expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    OR              reduce using rule 12 (expression -> expression XOR expression .)
+    AND             reduce using rule 12 (expression -> expression XOR expression .)
+    XOR             reduce using rule 12 (expression -> expression XOR expression .)
+    $end            reduce using rule 12 (expression -> expression XOR expression .)
+    RPAREN          reduce using rule 12 (expression -> expression XOR expression .)
+    DIVIDE          shift and go to state 12
+    EXPONENTIATION  shift and go to state 13
+    MINUS           shift and go to state 14
+    MODULUS         shift and go to state 15
+    MULTIPLY        shift and go to state 16
+    PLUS            shift and go to state 17
+    RAND            shift and go to state 21
+    FACTORIAL       shift and go to state 22
+    ROOT            shift and go to state 23
+
+  ! DIVIDE          [ reduce using rule 12 (expression -> expression XOR expression .) ]
+  ! EXPONENTIATION  [ reduce using rule 12 (expression -> expression XOR expression .) ]
+  ! MINUS           [ reduce using rule 12 (expression -> expression XOR expression .) ]
+  ! MODULUS         [ reduce using rule 12 (expression -> expression XOR expression .) ]
+  ! MULTIPLY        [ reduce using rule 12 (expression -> expression XOR expression .) ]
+  ! PLUS            [ reduce using rule 12 (expression -> expression XOR expression .) ]
+  ! RAND            [ reduce using rule 12 (expression -> expression XOR expression .) ]
+  ! FACTORIAL       [ reduce using rule 12 (expression -> expression XOR expression .) ]
+  ! ROOT            [ reduce using rule 12 (expression -> expression XOR expression .) ]
+  ! OR              [ shift and go to state 18 ]
+  ! AND             [ shift and go to state 19 ]
+  ! XOR             [ shift and go to state 20 ]
+
+
+state 39
+
+    (13) expression -> expression RAND expression .
+    (4) expression -> expression . DIVIDE expression
+    (5) expression -> expression . EXPONENTIATION expression
+    (6) expression -> expression . MINUS expression
+    (7) expression -> expression . MODULUS expression
+    (8) expression -> expression . MULTIPLY expression
+    (9) expression -> expression . PLUS expression
+    (10) expression -> expression . OR expression
+    (11) expression -> expression . AND expression
+    (12) expression -> expression . XOR expression
+    (13) expression -> expression . RAND expression
+    (17) expression -> expression . FACTORIAL
+    (18) expression -> expression . ROOT
+
+    DIVIDE          reduce using rule 13 (expression -> expression RAND expression .)
+    EXPONENTIATION  reduce using rule 13 (expression -> expression RAND expression .)
+    MINUS           reduce using rule 13 (expression -> expression RAND expression .)
+    MODULUS         reduce using rule 13 (expression -> expression RAND expression .)
+    MULTIPLY        reduce using rule 13 (expression -> expression RAND expression .)
+    PLUS            reduce using rule 13 (expression -> expression RAND expression .)
+    OR              reduce using rule 13 (expression -> expression RAND expression .)
+    AND             reduce using rule 13 (expression -> expression RAND expression .)
+    XOR             reduce using rule 13 (expression -> expression RAND expression .)
+    RAND            reduce using rule 13 (expression -> expression RAND expression .)
+    FACTORIAL       reduce using rule 13 (expression -> expression RAND expression .)
+    ROOT            reduce using rule 13 (expression -> expression RAND expression .)
+    $end            reduce using rule 13 (expression -> expression RAND expression .)
+    RPAREN          reduce using rule 13 (expression -> expression RAND expression .)
+
+  ! DIVIDE          [ shift and go to state 12 ]
+  ! EXPONENTIATION  [ shift and go to state 13 ]
+  ! MINUS           [ shift and go to state 14 ]
+  ! MODULUS         [ shift and go to state 15 ]
+  ! MULTIPLY        [ shift and go to state 16 ]
+  ! PLUS            [ shift and go to state 17 ]
+  ! OR              [ shift and go to state 18 ]
+  ! AND             [ shift and go to state 19 ]
+  ! XOR             [ shift and go to state 20 ]
+  ! RAND            [ shift and go to state 21 ]
+  ! FACTORIAL       [ shift and go to state 22 ]
+  ! ROOT            [ shift and go to state 23 ]
+
+
+state 40
+
+    (19) expression -> LPAREN expression RPAREN .
+
+    DIVIDE          reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+    EXPONENTIATION  reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+    MINUS           reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+    MODULUS         reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+    MULTIPLY        reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+    PLUS            reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+    OR              reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+    AND             reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+    XOR             reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+    RAND            reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+    FACTORIAL       reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+    ROOT            reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+    $end            reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+    RPAREN          reduce using rule 19 (expression -> LPAREN expression RPAREN .)
+
